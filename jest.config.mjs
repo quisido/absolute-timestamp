@@ -6,6 +6,7 @@ export default {
   resetModules: true,
   restoreMocks: true,
   roots: ['<rootDir>/src'],
+  testEnvironment: 'jsdom',
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/**/*.d.ts',
@@ -20,9 +21,6 @@ export default {
       lines: 100,
       statements: 100,
     },
-  },
-  moduleNameMapper: {
-    '\\.(?:css|gif|jpg|png|scss)$': '<rootDir>/test-utils/empty.ts',
   },
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
