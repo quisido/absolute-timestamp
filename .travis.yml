@@ -2,16 +2,18 @@ language: node_js
 node_js: 14
 branches:
   only: main
-install:
-- yarn
-script:
-- yarn build
-- yarn test
 deploy:
-  api_key:
-    secure: wHEGc+/6pjpzKNDTpfI7cHfZ4TBdEAt+red99ZmQcXoIFaR/mhF/njcuHRmh+jd4gVBDGwmIFcPJsX84wPonAtHnWfrrMlTJF4eFC2yiteatwNG7xgM9mreTjjGXve+2BPOlba7bKW9XT8PUBUeoFHDo00fPX+otcXnM2Knqe3iA/XJCXgd1uTp51fMFeSnvrRhad7IJUR4AKK+Rd5CgQ1zXI7nWXLWouKKQlMsam5s1SEV4UhRILimXTyDxsl1NgVkj7yqRbROiwNAdgODXRFWnYyqsJYfbS9c3j/wVIlMVRGjCRqy72OL1XG30YddmjKkEuPPYHqSESFyQDi7fhmrUGJCKnGc8hurkaQEe7C+9s6x7O/qCadeNmwSgDUFo2sdlRw/k1/RS2+d+Jq0PxlK36yFmr5THSg4fdpoOmPa9ZXyI/oVDA0qxCw+xSHS95f9I+AGsUz7PwixgbpnXjo2h+6kdfpcwmThme+SPQMUTCQcComr6Oew/om3h1x36LBBN1RolQmG6sbrDi7aKRzYCBjBdurmObz/E6Ot8eSo2DMTkifYv1lTWCbbF52eIoGM1B749qlS7qYgPiTzeintzYmynYhPT5I0JmH0RTGVc+gMxJE3AR95bGSW2DmZ2soQYTKFCERqdUSHktLPKy9jgIBF1CpbHkljRzfBosE4=
   email: npmjs@charlesstover.com
-  on:
-    branch: main
   provider: npm
   skip_cleanup: true
+  api_key:
+    secure: wHEGc+/6pjpzKNDTpfI7cHfZ4TBdEAt+red99ZmQcXoIFaR/mhF/njcuHRmh+jd4gVBDGwmIFcPJsX84wPonAtHnWfrrMlTJF4eFC2yiteatwNG7xgM9mreTjjGXve+2BPOlba7bKW9XT8PUBUeoFHDo00fPX+otcXnM2Knqe3iA/XJCXgd1uTp51fMFeSnvrRhad7IJUR4AKK+Rd5CgQ1zXI7nWXLWouKKQlMsam5s1SEV4UhRILimXTyDxsl1NgVkj7yqRbROiwNAdgODXRFWnYyqsJYfbS9c3j/wVIlMVRGjCRqy72OL1XG30YddmjKkEuPPYHqSESFyQDi7fhmrUGJCKnGc8hurkaQEe7C+9s6x7O/qCadeNmwSgDUFo2sdlRw/k1/RS2+d+Jq0PxlK36yFmr5THSg4fdpoOmPa9ZXyI/oVDA0qxCw+xSHS95f9I+AGsUz7PwixgbpnXjo2h+6kdfpcwmThme+SPQMUTCQcComr6Oew/om3h1x36LBBN1RolQmG6sbrDi7aKRzYCBjBdurmObz/E6Ot8eSo2DMTkifYv1lTWCbbF52eIoGM1B749qlS7qYgPiTzeintzYmynYhPT5I0JmH0RTGVc+gMxJE3AR95bGSW2DmZ2soQYTKFCERqdUSHktLPKy9jgIBF1CpbHkljRzfBosE4=
+  on:
+    branch: main
+install:
+  - yarn
+script:
+  - yarn build
+  - yarn test
+env:
+  - TZ: America/Los_Angeles
