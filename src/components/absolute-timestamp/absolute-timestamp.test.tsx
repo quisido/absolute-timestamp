@@ -2,12 +2,9 @@ import { render } from '@testing-library/react';
 import AbsoluteTimestamp from '.';
 
 describe('AbsoluteTimestamp', (): void => {
-  beforeEach((): void => {
-    process.env.TZ = 'UTC';
-  });
-
+  // Set the local time zone to `America/Los_Angeles` via the `TZ` environment
+  //   variable. For CI, this is set in the `.travis.yml` file.
   it('should render local time', (): void => {
-    process.env.TZ = 'America/Los_Angeles';
     const { getByText } = render(<AbsoluteTimestamp>0</AbsoluteTimestamp>);
     expect((): void => {
       getByText('December 31, 1969, 16:00 PST');
