@@ -1,6 +1,6 @@
 {
   "name": "absolute-timestamp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Charles Stover <absolute-timestamp@charlesstover.com>",
   "description": "React component to formats a timestamp in absolute time.",
   "homepage": "https://www.npmjs.com/package/absolute-timestamp",
